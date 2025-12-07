@@ -130,3 +130,11 @@ class Store {
     return null;
   }
 }
+
+// Helper to log text to console and to the page <pre>
+function writeLine(text) {
+  console.log(text);
+  const output = document.getElementById("output");
+  if (output) {
+    output.textContent += text + "\n";
+  }
