@@ -118,4 +118,15 @@ class Store {
     }
     return total;
   }
+
+  // Find product by name (case-insensitive)
+  findProductByName(name) {
+    const lowerName = name.toLowerCase();
+    for (let product of this.inventory) {
+      if (product.name.toLowerCase() === lowerName) {
+        return product;
+      }
+    }
+    return null;
+  }
 }
