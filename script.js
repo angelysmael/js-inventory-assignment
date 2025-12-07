@@ -159,4 +159,13 @@ function runDemo() {
   myStore.addProduct(charger);
   myStore.addProduct(eggs);
   myStore.addProduct(iceCream);
+   // Show inventory before discount
+  writeLine("=== Inventory Before Discount ===");
+  for (let product of myStore.inventory) {
+    writeLine(product.toString());
+  }
+  writeLine(
+    "Total inventory value (before discount): $" +
+      myStore.getInventoryValue().toFixed(2)
+  );
 }
