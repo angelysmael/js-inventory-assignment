@@ -104,4 +104,9 @@ class Store {
     this.name = name || "Unnamed Store";
     this.inventory = []; // array of Product or PerishableProduct
   }
+
+  // Add a product to the inventory
+  addProduct(product) {
+    this.inventory.push(product);
+  }
 }
