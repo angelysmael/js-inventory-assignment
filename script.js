@@ -43,3 +43,37 @@ class Product {
     );
   }
 }
+// Product class: basic product information
+class Product {
+  constructor(name, price, quantity) {
+    this.name = name;
+    this.price = price;
+    this.quantity = quantity;
+  }
+
+  // Returns total value of this product in stock
+  getTotalValue() {
+    return this.price * this.quantity;
+  }
+
+  // Simple string with product info
+  toString() {
+    return (
+      "Product: " +
+      this.name +
+      ", Price: $" +
+      this.price.toFixed(2) +
+      ", Quantity: " +
+      this.quantity
+    );
+  }
+
+  // Static method to apply discount to all products in array
+  static applyDiscount(products, discount) {
+    for (let product of products) {
+      if (product instanceof Product) {
+        product.price = product.price * (1 - discount);
+      }
+    }
+  }
+}
