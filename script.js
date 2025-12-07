@@ -83,4 +83,18 @@ class PerishableProduct extends Product {
     super(name, price, quantity); // call parent constructor
     this.expirationDate = expirationDate;
   }
+
+  // Include expiration date in string
+  toString() {
+    return (
+      "Product: " +
+      this.name +
+      ", Price: $" +
+      this.price.toFixed(2) +
+      ", Quantity: " +
+      this.quantity +
+      ", Expiration Date: " +
+      this.expirationDate
+    );
+  }
 }
