@@ -183,4 +183,18 @@ function runDemo() {
     "Total inventory value (after discount): $" +
       myStore.getInventoryValue().toFixed(2)
   );
+
+  // Find a specific product by name
+  writeLine("");
+  writeLine("=== Search Result ===");
+  const searchName = "Ice Cream";
+  const foundProduct = myStore.findProductByName(searchName);
+
+  if (foundProduct) {
+    writeLine("Found: " + foundProduct.toString());
+  } else {
+    writeLine("Product '" + searchName + "' not found.");
+  }
 }
+// Run the demo when the script loads
+runDemo();
