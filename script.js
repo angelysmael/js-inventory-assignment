@@ -159,13 +159,28 @@ function runDemo() {
   myStore.addProduct(charger);
   myStore.addProduct(eggs);
   myStore.addProduct(iceCream);
-   // Show inventory before discount
+
+  // Show inventory before discount
   writeLine("=== Inventory Before Discount ===");
   for (let product of myStore.inventory) {
     writeLine(product.toString());
   }
   writeLine(
     "Total inventory value (before discount): $" +
+      myStore.getInventoryValue().toFixed(2)
+  );
+
+  // Apply 15% discount to all products
+  const discount = 0.15;
+  Product.applyDiscount(myStore.inventory, discount);
+
+  writeLine("");
+  writeLine("=== Inventory After 15% Discount ===");
+  for (let product of myStore.inventory) {
+    writeLine(product.toString());
+  }
+  writeLine(
+    "Total inventory value (after discount): $" +
       myStore.getInventoryValue().toFixed(2)
   );
 }
