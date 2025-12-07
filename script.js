@@ -77,3 +77,10 @@ class Product {
     }
   }
 }
+// PerishableProduct class: has an expiration date and extends Product
+class PerishableProduct extends Product {
+  constructor(name, price, quantity, expirationDate) {
+    super(name, price, quantity); // call parent constructor
+    this.expirationDate = expirationDate;
+  }
+}
