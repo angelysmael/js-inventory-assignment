@@ -138,3 +138,25 @@ function writeLine(text) {
   if (output) {
     output.textContent += text + "\n";
   }
+
+  // Main demo function for the assignment
+function runDemo() {
+  // Regular products
+  const tshirt = new Product("T-Shirt", 19.99, 30);
+  const sneakers = new Product("Sneakers", 89.5, 12);
+  const charger = new Product("Phone Charger", 14.0, 25);
+
+  // Perishable products
+  const eggs = new PerishableProduct("Eggs", 4.25, 18, "2025-02-10");
+  const iceCream = new PerishableProduct("Ice Cream", 6.99, 10, "2024-12-20");
+
+  // Store with my name in it
+  const myStore = new Store("Princess Retail Hub");
+
+  // Add products to store inventory
+  myStore.addProduct(tshirt);
+  myStore.addProduct(sneakers);
+  myStore.addProduct(charger);
+  myStore.addProduct(eggs);
+  myStore.addProduct(iceCream);
+}
