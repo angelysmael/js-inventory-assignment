@@ -98,3 +98,10 @@ class PerishableProduct extends Product {
     );
   }
 }
+// Store class: manages inventory of Product and PerishableProduct
+class Store {
+  constructor(name) {
+    this.name = name || "Unnamed Store";
+    this.inventory = []; // array of Product or PerishableProduct
+  }
+}
